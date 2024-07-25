@@ -1,0 +1,24 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"operators.coreos.com/v1alpha1","kind":"Subscription","metadata":{"annotations":{},"creationTimestamp":"2024-07-24T08:09:27Z","generation":1,"labels":{"operators.coreos.com/openshift-gitops-operator.openshift-operators":""},"name":"openshift-gitops-operator","namespace":"openshift-operators","resourceVersion":"405861","uid":"61d55c27-4afc-466b-a713-d71bd5aead4d"},"spec":{"channel":"stable","config":{"env":[{"name":"DISABLE_DEFAULT_ARGOCD_INSTANCE","value":"TRUE"}]},"installPlanApproval":"Automatic","name":"openshift-gitops-operator","source":"redhat-operators","sourceNamespace":"openshift-marketplace"},"status":{"catalogHealth":[{"catalogSourceRef":{"apiVersion":"operators.coreos.com/v1alpha1","kind":"CatalogSource","name":"certified-operators","namespace":"openshift-marketplace","resourceVersion":"67233","uid":"cec55c2c-3a89-489a-a353-3b5bb4eb4878"},"healthy":true,"lastUpdated":"2024-07-24T08:10:04Z"},{"catalogSourceRef":{"apiVersion":"operators.coreos.com/v1alpha1","kind":"CatalogSource","name":"community-operators","namespace":"openshift-marketplace","resourceVersion":"67237","uid":"2a4e6925-0acd-490f-8824-37d6095d5ac2"},"healthy":true,"lastUpdated":"2024-07-24T08:10:04Z"},{"catalogSourceRef":{"apiVersion":"operators.coreos.com/v1alpha1","kind":"CatalogSource","name":"redhat-marketplace","namespace":"openshift-marketplace","resourceVersion":"67230","uid":"b6ffcf83-337a-4080-b91a-5c06357c1645"},"healthy":true,"lastUpdated":"2024-07-24T08:10:04Z"},{"catalogSourceRef":{"apiVersion":"operators.coreos.com/v1alpha1","kind":"CatalogSource","name":"redhat-operators","namespace":"openshift-marketplace","resourceVersion":"67242","uid":"986dfdaf-46a5-4f4a-9ddd-a01578f072e6"},"healthy":true,"lastUpdated":"2024-07-24T08:10:04Z"}],"conditions":[{"lastTransitionTime":"2024-07-24T08:10:04Z","message":"all available catalogsources are healthy","reason":"AllCatalogSourcesHealthy","status":"False","type":"CatalogSourcesUnhealthy"},{"message":"constraints not satisfiable: no operators found in channel stable of package openshift-gitops-operator in the catalog referenced by subscription openshift-gitops-operator, subscription openshift-gitops-operator exists","reason":"ConstraintsNotSatisfiable","status":"True","type":"ResolutionFailed"}],"lastUpdated":"2024-07-25T01:54:55Z"}}
+  creationTimestamp: "2024-07-25T02:01:40Z"
+  generation: 1
+  labels:
+    operators.coreos.com/openshift-gitops-operator.openshift-operators: ""
+  name: openshift-gitops-operator
+  namespace: openshift-operators
+  resourceVersion: "408118"
+  uid: 3f6e8083-1cd2-43d4-86b0-4c056fb59f61
+spec:
+  channel: stable
+  config:
+    env:
+    - name: DISABLE_DEFAULT_ARGOCD_INSTANCE
+      value: "TRUE"
+  installPlanApproval: Automatic
+  name: openshift-gitops-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
